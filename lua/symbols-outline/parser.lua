@@ -116,7 +116,7 @@ function M.get_lines(flattened_outline_items)
       if config.options.show_guides then
         -- makes the guides
         if index == 1 then
-          line[index] = ' '
+          line[index] = ''
           -- i f index is last, add a bottom marker if current item is last,
           -- else add a middle marker
         elseif index == #line then
@@ -164,7 +164,7 @@ function M.get_lines(flattened_outline_items)
         end
       end
 
-      line[index] = line[index] .. ' '
+      line[index] = line[index] .. ''
 
       running_length = running_length + vim.fn.strlen(line[index])
     end

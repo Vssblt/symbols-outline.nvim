@@ -30,6 +30,8 @@ function View:setup_view()
   vim.api.nvim_win_set_option(self.winnr, 'wrap', config.options.wrap)
   vim.api.nvim_win_set_option(self.winnr, 'linebreak', true) -- only has effect when wrap=true
   vim.api.nvim_win_set_option(self.winnr, 'breakindent', true) -- only has effect when wrap=true
+  vim.api.nvim_win_set_option(self.winnr, 'signcolumn', "no")
+  vim.api.nvim_win_set_option(self.winnr, 'foldcolumn', "0")
   --  Would be nice to use ui.markers.vertical as part of showbreak to keep
   --  continuity of the tree UI, but there's currently no way to style the
   --  color, apart from globally overriding hl-NonText, which will potentially
